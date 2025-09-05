@@ -1,0 +1,66 @@
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+  ~ update in-place
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # azurerm_subnet_route_table_association.avd_snet_rt_association must be replaced
+-/+ resource "azurerm_subnet_route_table_association" "avd_snet_rt_association" {
+      ~ id             = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-avd-scus-snet" -> (known after apply)
+      ~ route_table_id = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" -> "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/NetworkServices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" # forces replacement
+        # (1 unchanged attribute hidden)
+    }
+
+  # azurerm_subnet_route_table_association.dmz_snet_rt_association must be replaced
+-/+ resource "azurerm_subnet_route_table_association" "dmz_snet_rt_association" {
+      ~ id             = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-dmz-scus-snet" -> (known after apply)
+      ~ route_table_id = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" -> "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/NetworkServices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" # forces replacement
+        # (1 unchanged attribute hidden)
+    }
+
+  # azurerm_subnet_route_table_association.internal_snet_rt_association must be replaced
+-/+ resource "azurerm_subnet_route_table_association" "internal_snet_rt_association" {
+      ~ id             = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-internal-scus-snet" -> (known after apply)
+      ~ route_table_id = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" -> "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/NetworkServices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" # forces replacement
+        # (1 unchanged attribute hidden)
+    }
+
+  # azurerm_virtual_desktop_application_group.Intertel-STG-Personal-Pool01_dag will be updated in-place
+  ~ resource "azurerm_virtual_desktop_application_group" "Intertel-STG-Personal-Pool01_dag" {
+      ~ default_desktop_display_name = "INT Stagging Pool" -> "INT Staging Pool"
+        id                           = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.DesktopVirtualization/applicationGroups/Intertel-Staging-dag"
+        name                         = "Intertel-Staging-dag"
+        tags                         = {}
+        # (6 unchanged attributes hidden)
+    }
+
+  # azurerm_virtual_desktop_host_pool_registration_info.Intertel-STG-Personal-Pool01_registrationinfo will be created
+  + resource "azurerm_virtual_desktop_host_pool_registration_info" "Intertel-STG-Personal-Pool01_registrationinfo" {
+      + expiration_date = "2023-06-10T12:01:00Z"
+      + hostpool_id     = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.DesktopVirtualization/hostPools/Intertel-Staging-Personal-Pool01"
+      + id              = (known after apply)
+      + token           = (sensitive value)
+    }
+
+  # azurerm_virtual_machine_extension.Intertel-STG-Personal-Pool01_vmext_dsc[0] will be updated in-place
+  ~ resource "azurerm_virtual_machine_extension" "Intertel-STG-Personal-Pool01_vmext_dsc" {
+        id                          = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/IN-STG-Per-1/extensions/IN-STG-Per1-avd_dsc"
+        name                        = "IN-STG-Per1-avd_dsc"
+      ~ protected_settings          = (sensitive value)
+        tags                        = {}
+        # (8 unchanged attributes hidden)
+    }
+
+  # azurerm_virtual_machine_extension.Intertel-STG-Personal-Pool01_vmext_dsc[1] will be updated in-place
+  ~ resource "azurerm_virtual_machine_extension" "Intertel-STG-Personal-Pool01_vmext_dsc" {
+        id                          = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/IN-STG-Per-2/extensions/IN-STG-Per2-avd_dsc"
+        name                        = "IN-STG-Per2-avd_dsc"
+      ~ protected_settings          = (sensitive value)
+        tags                        = {}
+        # (8 unchanged attributes hidden)
+    }
+
+Plan: 4 to add, 3 to change, 3 to destroy.

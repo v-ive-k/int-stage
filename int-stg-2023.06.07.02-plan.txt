@@ -1,0 +1,476 @@
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # azurerm_private_dns_a_record.dns_file_share will be created
+  + resource "azurerm_private_dns_a_record" "dns_file_share" {
+      + fqdn                = (known after apply)
+      + id                  = (known after apply)
+      + name                = "stgintfiles01"
+      + records             = (known after apply)
+      + resource_group_name = "int-staging-rg"
+      + ttl                 = 300
+      + zone_name           = "privatelink.file.core.windows.net"
+    }
+
+  # azurerm_private_dns_a_record.dns_profile_share will be created
+  + resource "azurerm_private_dns_a_record" "dns_profile_share" {
+      + fqdn                = (known after apply)
+      + id                  = (known after apply)
+      + name                = "stgintprofiles01"
+      + records             = (known after apply)
+      + resource_group_name = "int-staging-rg"
+      + ttl                 = 300
+      + zone_name           = "privatelink.file.core.windows.net"
+    }
+
+  # azurerm_private_endpoint.file_endpoint will be created
+  + resource "azurerm_private_endpoint" "file_endpoint" {
+      + custom_dns_configs            = (known after apply)
+      + custom_network_interface_name = "stgintfiles01-nic"
+      + id                            = (known after apply)
+      + location                      = "southcentralus"
+      + name                          = "stgintfiles01-pep01"
+      + network_interface             = (known after apply)
+      + private_dns_zone_configs      = (known after apply)
+      + resource_group_name           = "int-staging-rg"
+      + subnet_id                     = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-internal-scus-snet"
+
+      + ip_configuration {
+          + member_name        = (known after apply)
+          + name               = "stgintfiles01-ip-private"
+          + private_ip_address = "10.239.89.20"
+          + subresource_name   = "file"
+        }
+
+      + private_service_connection {
+          + is_manual_connection           = false
+          + name                           = "stgintfiles01_psc"
+          + private_connection_resource_id = (known after apply)
+          + private_ip_address             = (known after apply)
+          + subresource_names              = [
+              + "file",
+            ]
+        }
+    }
+
+  # azurerm_private_endpoint.profile_endpoint will be created
+  + resource "azurerm_private_endpoint" "profile_endpoint" {
+      + custom_dns_configs            = (known after apply)
+      + custom_network_interface_name = "devintprofiles01-nic"
+      + id                            = (known after apply)
+      + location                      = "southcentralus"
+      + name                          = "stgintprofiles01-pep01"
+      + network_interface             = (known after apply)
+      + private_dns_zone_configs      = (known after apply)
+      + resource_group_name           = "int-staging-rg"
+      + subnet_id                     = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-internal-scus-snet"
+
+      + ip_configuration {
+          + member_name        = (known after apply)
+          + name               = "stgintprofiles01-ip-private"
+          + private_ip_address = "10.239.89.21"
+          + subresource_name   = "file"
+        }
+
+      + private_service_connection {
+          + is_manual_connection           = false
+          + name                           = "stgintprofiles01_psc"
+          + private_connection_resource_id = (known after apply)
+          + private_ip_address             = (known after apply)
+          + subresource_names              = [
+              + "file",
+            ]
+        }
+    }
+
+  # azurerm_storage_account.file_storage_acc will be created
+  + resource "azurerm_storage_account" "file_storage_acc" {
+      + access_tier                       = (known after apply)
+      + account_kind                      = "StorageV2"
+      + account_replication_type          = "LRS"
+      + account_tier                      = "Standard"
+      + allow_nested_items_to_be_public   = true
+      + cross_tenant_replication_enabled  = true
+      + default_to_oauth_authentication   = false
+      + enable_https_traffic_only         = true
+      + id                                = (known after apply)
+      + infrastructure_encryption_enabled = false
+      + is_hns_enabled                    = false
+      + large_file_share_enabled          = true
+      + location                          = "southcentralus"
+      + min_tls_version                   = "TLS1_2"
+      + name                              = "stgintfiles01"
+      + nfsv3_enabled                     = false
+      + primary_access_key                = (sensitive value)
+      + primary_blob_connection_string    = (sensitive value)
+      + primary_blob_endpoint             = (known after apply)
+      + primary_blob_host                 = (known after apply)
+      + primary_connection_string         = (sensitive value)
+      + primary_dfs_endpoint              = (known after apply)
+      + primary_dfs_host                  = (known after apply)
+      + primary_file_endpoint             = (known after apply)
+      + primary_file_host                 = (known after apply)
+      + primary_location                  = (known after apply)
+      + primary_queue_endpoint            = (known after apply)
+      + primary_queue_host                = (known after apply)
+      + primary_table_endpoint            = (known after apply)
+      + primary_table_host                = (known after apply)
+      + primary_web_endpoint              = (known after apply)
+      + primary_web_host                  = (known after apply)
+      + public_network_access_enabled     = true
+      + queue_encryption_key_type         = "Service"
+      + resource_group_name               = "int-staging-rg"
+      + secondary_access_key              = (sensitive value)
+      + secondary_blob_connection_string  = (sensitive value)
+      + secondary_blob_endpoint           = (known after apply)
+      + secondary_blob_host               = (known after apply)
+      + secondary_connection_string       = (sensitive value)
+      + secondary_dfs_endpoint            = (known after apply)
+      + secondary_dfs_host                = (known after apply)
+      + secondary_file_endpoint           = (known after apply)
+      + secondary_file_host               = (known after apply)
+      + secondary_location                = (known after apply)
+      + secondary_queue_endpoint          = (known after apply)
+      + secondary_queue_host              = (known after apply)
+      + secondary_table_endpoint          = (known after apply)
+      + secondary_table_host              = (known after apply)
+      + secondary_web_endpoint            = (known after apply)
+      + secondary_web_host                = (known after apply)
+      + sftp_enabled                      = false
+      + shared_access_key_enabled         = true
+      + table_encryption_key_type         = "Service"
+      + tags                              = {
+          + "Migrate Project" = "INT-MigProject-01"
+          + "domain"          = "intertel"
+          + "environment"     = "development"
+          + "managed by"      = "terraform"
+          + "owner"           = "Greg Johnson"
+        }
+
+      + blob_properties {
+          + change_feed_enabled           = (known after apply)
+          + change_feed_retention_in_days = (known after apply)
+          + default_service_version       = (known after apply)
+          + last_access_time_enabled      = (known after apply)
+          + versioning_enabled            = (known after apply)
+
+          + container_delete_retention_policy {
+              + days = (known after apply)
+            }
+
+          + cors_rule {
+              + allowed_headers    = (known after apply)
+              + allowed_methods    = (known after apply)
+              + allowed_origins    = (known after apply)
+              + exposed_headers    = (known after apply)
+              + max_age_in_seconds = (known after apply)
+            }
+
+          + delete_retention_policy {
+              + days = (known after apply)
+            }
+
+          + restore_policy {
+              + days = (known after apply)
+            }
+        }
+
+      + network_rules {
+          + bypass                     = (known after apply)
+          + default_action             = "Deny"
+          + ip_rules                   = [
+              + "172.119.179.173",
+              + "35.134.145.242",
+              + "47.180.141.242",
+              + "52.248.96.7",
+              + "65.87.34.242",
+            ]
+          + virtual_network_subnet_ids = [
+              + "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-avd-scus-snet",
+              + "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-internal-scus-snet",
+            ]
+        }
+
+      + queue_properties {
+          + cors_rule {
+              + allowed_headers    = (known after apply)
+              + allowed_methods    = (known after apply)
+              + allowed_origins    = (known after apply)
+              + exposed_headers    = (known after apply)
+              + max_age_in_seconds = (known after apply)
+            }
+
+          + hour_metrics {
+              + enabled               = (known after apply)
+              + include_apis          = (known after apply)
+              + retention_policy_days = (known after apply)
+              + version               = (known after apply)
+            }
+
+          + logging {
+              + delete                = (known after apply)
+              + read                  = (known after apply)
+              + retention_policy_days = (known after apply)
+              + version               = (known after apply)
+              + write                 = (known after apply)
+            }
+
+          + minute_metrics {
+              + enabled               = (known after apply)
+              + include_apis          = (known after apply)
+              + retention_policy_days = (known after apply)
+              + version               = (known after apply)
+            }
+        }
+
+      + routing {
+          + choice                      = (known after apply)
+          + publish_internet_endpoints  = (known after apply)
+          + publish_microsoft_endpoints = (known after apply)
+        }
+
+      + share_properties {
+          + cors_rule {
+              + allowed_headers    = (known after apply)
+              + allowed_methods    = (known after apply)
+              + allowed_origins    = (known after apply)
+              + exposed_headers    = (known after apply)
+              + max_age_in_seconds = (known after apply)
+            }
+
+          + retention_policy {
+              + days = (known after apply)
+            }
+
+          + smb {
+              + authentication_types            = (known after apply)
+              + channel_encryption_type         = (known after apply)
+              + kerberos_ticket_encryption_type = (known after apply)
+              + multichannel_enabled            = (known after apply)
+              + versions                        = (known after apply)
+            }
+        }
+    }
+
+  # azurerm_storage_account.file_storage_profiles will be created
+  + resource "azurerm_storage_account" "file_storage_profiles" {
+      + access_tier                       = (known after apply)
+      + account_kind                      = "StorageV2"
+      + account_replication_type          = "LRS"
+      + account_tier                      = "Standard"
+      + allow_nested_items_to_be_public   = true
+      + cross_tenant_replication_enabled  = true
+      + default_to_oauth_authentication   = false
+      + enable_https_traffic_only         = true
+      + id                                = (known after apply)
+      + infrastructure_encryption_enabled = false
+      + is_hns_enabled                    = false
+      + large_file_share_enabled          = true
+      + location                          = "southcentralus"
+      + min_tls_version                   = "TLS1_2"
+      + name                              = "stgintprofiles01"
+      + nfsv3_enabled                     = false
+      + primary_access_key                = (sensitive value)
+      + primary_blob_connection_string    = (sensitive value)
+      + primary_blob_endpoint             = (known after apply)
+      + primary_blob_host                 = (known after apply)
+      + primary_connection_string         = (sensitive value)
+      + primary_dfs_endpoint              = (known after apply)
+      + primary_dfs_host                  = (known after apply)
+      + primary_file_endpoint             = (known after apply)
+      + primary_file_host                 = (known after apply)
+      + primary_location                  = (known after apply)
+      + primary_queue_endpoint            = (known after apply)
+      + primary_queue_host                = (known after apply)
+      + primary_table_endpoint            = (known after apply)
+      + primary_table_host                = (known after apply)
+      + primary_web_endpoint              = (known after apply)
+      + primary_web_host                  = (known after apply)
+      + public_network_access_enabled     = true
+      + queue_encryption_key_type         = "Service"
+      + resource_group_name               = "int-staging-rg"
+      + secondary_access_key              = (sensitive value)
+      + secondary_blob_connection_string  = (sensitive value)
+      + secondary_blob_endpoint           = (known after apply)
+      + secondary_blob_host               = (known after apply)
+      + secondary_connection_string       = (sensitive value)
+      + secondary_dfs_endpoint            = (known after apply)
+      + secondary_dfs_host                = (known after apply)
+      + secondary_file_endpoint           = (known after apply)
+      + secondary_file_host               = (known after apply)
+      + secondary_location                = (known after apply)
+      + secondary_queue_endpoint          = (known after apply)
+      + secondary_queue_host              = (known after apply)
+      + secondary_table_endpoint          = (known after apply)
+      + secondary_table_host              = (known after apply)
+      + secondary_web_endpoint            = (known after apply)
+      + secondary_web_host                = (known after apply)
+      + sftp_enabled                      = false
+      + shared_access_key_enabled         = true
+      + table_encryption_key_type         = "Service"
+      + tags                              = {
+          + "Migrate Project" = "INT-MigProject-01"
+          + "domain"          = "intertel"
+          + "environment"     = "development"
+          + "managed by"      = "terraform"
+          + "owner"           = "Greg Johnson"
+        }
+
+      + blob_properties {
+          + change_feed_enabled           = (known after apply)
+          + change_feed_retention_in_days = (known after apply)
+          + default_service_version       = (known after apply)
+          + last_access_time_enabled      = (known after apply)
+          + versioning_enabled            = (known after apply)
+
+          + container_delete_retention_policy {
+              + days = (known after apply)
+            }
+
+          + cors_rule {
+              + allowed_headers    = (known after apply)
+              + allowed_methods    = (known after apply)
+              + allowed_origins    = (known after apply)
+              + exposed_headers    = (known after apply)
+              + max_age_in_seconds = (known after apply)
+            }
+
+          + delete_retention_policy {
+              + days = (known after apply)
+            }
+
+          + restore_policy {
+              + days = (known after apply)
+            }
+        }
+
+      + network_rules {
+          + bypass                     = (known after apply)
+          + default_action             = "Deny"
+          + ip_rules                   = [
+              + "172.119.179.173",
+              + "35.134.145.242",
+              + "47.180.141.242",
+              + "52.248.96.7",
+              + "65.87.34.242",
+            ]
+          + virtual_network_subnet_ids = [
+              + "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-avd-scus-snet",
+              + "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-internal-scus-snet",
+            ]
+        }
+
+      + queue_properties {
+          + cors_rule {
+              + allowed_headers    = (known after apply)
+              + allowed_methods    = (known after apply)
+              + allowed_origins    = (known after apply)
+              + exposed_headers    = (known after apply)
+              + max_age_in_seconds = (known after apply)
+            }
+
+          + hour_metrics {
+              + enabled               = (known after apply)
+              + include_apis          = (known after apply)
+              + retention_policy_days = (known after apply)
+              + version               = (known after apply)
+            }
+
+          + logging {
+              + delete                = (known after apply)
+              + read                  = (known after apply)
+              + retention_policy_days = (known after apply)
+              + version               = (known after apply)
+              + write                 = (known after apply)
+            }
+
+          + minute_metrics {
+              + enabled               = (known after apply)
+              + include_apis          = (known after apply)
+              + retention_policy_days = (known after apply)
+              + version               = (known after apply)
+            }
+        }
+
+      + routing {
+          + choice                      = (known after apply)
+          + publish_internet_endpoints  = (known after apply)
+          + publish_microsoft_endpoints = (known after apply)
+        }
+
+      + share_properties {
+          + cors_rule {
+              + allowed_headers    = (known after apply)
+              + allowed_methods    = (known after apply)
+              + allowed_origins    = (known after apply)
+              + exposed_headers    = (known after apply)
+              + max_age_in_seconds = (known after apply)
+            }
+
+          + retention_policy {
+              + days = (known after apply)
+            }
+
+          + smb {
+              + authentication_types            = (known after apply)
+              + channel_encryption_type         = (known after apply)
+              + kerberos_ticket_encryption_type = (known after apply)
+              + multichannel_enabled            = (known after apply)
+              + versions                        = (known after apply)
+            }
+        }
+    }
+
+  # azurerm_storage_share.file_share["totalaccess"] will be created
+  + resource "azurerm_storage_share" "file_share" {
+      + access_tier          = "TransactionOptimized"
+      + enabled_protocol     = "SMB"
+      + id                   = (known after apply)
+      + metadata             = (known after apply)
+      + name                 = "totalaccess"
+      + quota                = 100
+      + resource_manager_id  = (known after apply)
+      + storage_account_name = "stgintfiles01"
+      + url                  = (known after apply)
+    }
+
+  # azurerm_storage_share.file_storage_profiles["profiles01"] will be created
+  + resource "azurerm_storage_share" "file_storage_profiles" {
+      + access_tier          = "TransactionOptimized"
+      + enabled_protocol     = "SMB"
+      + id                   = (known after apply)
+      + metadata             = (known after apply)
+      + name                 = "profiles01"
+      + quota                = 100
+      + resource_manager_id  = (known after apply)
+      + storage_account_name = "stgintprofiles01"
+      + url                  = (known after apply)
+    }
+
+  # azurerm_subnet_route_table_association.avd_snet_rt_association must be replaced
+-/+ resource "azurerm_subnet_route_table_association" "avd_snet_rt_association" {
+      ~ id             = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-avd-scus-snet" -> (known after apply)
+      ~ route_table_id = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" -> "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/NetworkServices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" # forces replacement
+        # (1 unchanged attribute hidden)
+    }
+
+  # azurerm_subnet_route_table_association.dmz_snet_rt_association must be replaced
+-/+ resource "azurerm_subnet_route_table_association" "dmz_snet_rt_association" {
+      ~ id             = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-dmz-scus-snet" -> (known after apply)
+      ~ route_table_id = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" -> "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/NetworkServices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" # forces replacement
+        # (1 unchanged attribute hidden)
+    }
+
+  # azurerm_subnet_route_table_association.internal_snet_rt_association must be replaced
+-/+ resource "azurerm_subnet_route_table_association" "internal_snet_rt_association" {
+      ~ id             = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-internal-scus-snet" -> (known after apply)
+      ~ route_table_id = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" -> "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/NetworkServices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" # forces replacement
+        # (1 unchanged attribute hidden)
+    }
+
+Plan: 11 to add, 0 to change, 3 to destroy.

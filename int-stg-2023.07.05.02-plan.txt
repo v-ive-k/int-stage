@@ -1,0 +1,171 @@
+data.azurerm_virtual_network.network-dev-scus-vnet: Reading...
+data.azurerm_route_table.dev-scus-rt: Reading...
+azurerm_resource_group.main_rg: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg]
+azurerm_proximity_placement_group.int-stg-ppg: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/proximityPlacementGroups/int-stg-ppg]
+azurerm_nat_gateway.int-staging-ngw: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/natGateways/ont-dev1-int-staging-scus-ngw]
+azurerm_virtual_desktop_workspace.stg_workspace: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.DesktopVirtualization/workspaces/Intertel-Staging]
+azurerm_network_security_group.dmz_nsg: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-dmz-scus-nsg]
+azurerm_role_assignment.owner_ra: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Authorization/roleAssignments/5ea8d9d9-8b60-9993-9399-43350bf225ea]
+azurerm_virtual_network.main_vnet: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet]
+azurerm_network_security_group.avd_nsg: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-avd-scus-nsg]
+azurerm_role_assignment.contributor_ra: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Authorization/roleAssignments/fad004b0-e10c-86f6-1f18-fbde1602184c]
+data.azurerm_virtual_network.network-dev-scus-vnet: Read complete after 0s [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/virtualNetworks/network-dev-scus-vnet]
+azurerm_virtual_desktop_host_pool.Intertel-STG-Personal-Pool01_hostpool: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.DesktopVirtualization/hostPools/Intertel-Staging-Personal-Pool01]
+azurerm_role_assignment.reader_ra: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Authorization/roleAssignments/638ffbe4-6d6b-c91a-040b-d0d1010644f3]
+azurerm_managed_disk.vm-sql-disks["data"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/disks/STINB2-SQL01-disk-SQLVMDATA01]
+azurerm_managed_disk.vm-sql-disks["logs"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/disks/STINB2-SQL01-disk-SQLVMLOGS]
+azurerm_managed_disk.vm-sql-disks["tempdb"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/disks/STINB2-SQL01-disk-SQLVMTEMPDB]
+azurerm_network_security_group.internal_nsg: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-inernal-scus-nsg]
+azurerm_private_dns_zone.privatelink-file-dns: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/privateDnsZones/privatelink.file.core.windows.net]
+data.azurerm_virtual_network.IT-Prod-SCUS-VNet: Reading...
+data.azurerm_shared_image.AVD-INT-Win10-img: Reading...
+data.azurerm_key_vault.ONT-IT-KeyVault: Reading...
+data.azurerm_virtual_network.MR8-Prod-SCUS-VNet: Reading...
+azurerm_public_ip.int-staging-ngw-pip01: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/publicIPAddresses/int-staging-ngw-scus-pip01]
+data.azurerm_route_table.dev-scus-rt: Read complete after 1s [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/NetworkServices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt]
+azurerm_subnet.internal_snet: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-internal-scus-snet]
+azurerm_subnet.dmz_snet: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-dmz-scus-snet]
+data.azurerm_key_vault.ONT-IT-KeyVault: Read complete after 0s [id=/subscriptions/58e2361d-344c-4e85-b45b-c7435e9e2a42/resourceGroups/IT-Prod-RG/providers/Microsoft.KeyVault/vaults/ONT-IT-KeyVault]
+azurerm_virtual_network_peering.main_vnet_network-dev-scus-vnet: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/virtualNetworkPeerings/intertel-staging-scus-vnet-TO-network-dev-scus-vnet]
+data.azurerm_shared_image.AVD-INT-Win10-img: Read complete after 0s [id=/subscriptions/58e2361d-344c-4e85-b45b-c7435e9e2a42/resourceGroups/IT-Prod-RG/providers/Microsoft.Compute/galleries/Ont_Prod1_scus_scg/images/AVD-INT-Win10-img]
+azurerm_subnet.avd_snet: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-avd-scus-snet]
+azurerm_virtual_network_peering.network-dev-scus-vnet_main_vnet: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/virtualNetworks/network-dev-scus-vnet/virtualNetworkPeerings/network-dev-scus-vnet-TO-intertel-staging-scus-vnet]
+azurerm_network_security_rule.avd_default_deny_sr: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-avd-scus-nsg/securityRules/In_Any-AVD-snet_Deny_All]
+azurerm_network_security_rule.avd_allow_IT_sr: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-avd-scus-nsg/securityRules/In_cca1-IT-001_AVD-snet_Allow_All]
+azurerm_network_security_rule.avd_allow_IT_sr2: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-avd-scus-nsg/securityRules/In_STL-RT01_AVD-snet_Allow_All]
+azurerm_network_security_rule.avd_snet_allow_sr: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-avd-scus-nsg/securityRules/In_Any-AVD-snet_AVD-snet_Allow_All]
+azurerm_virtual_desktop_application_group.Intertel-STG-Personal-Pool01_dag: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.DesktopVirtualization/applicationGroups/Intertel-Staging-dag]
+azurerm_network_security_rule.internal_allow_avd_mssql_sr: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-inernal-scus-nsg/securityRules/In_avd-snet_internal-snet_All_STINB2-SQL01]
+data.azurerm_virtual_network.IT-Prod-SCUS-VNet: Read complete after 1s [id=/subscriptions/58e2361d-344c-4e85-b45b-c7435e9e2a42/resourceGroups/IT-Prod-RG/providers/Microsoft.Network/virtualNetworks/IT-Prod-SCUS-VNet]
+azurerm_network_security_rule.internal_snet_allow_sr: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-inernal-scus-nsg/securityRules/In_Any-internal-snet_internal-snet_Allow_All]
+azurerm_network_security_rule.internal_default_deny_sr: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-inernal-scus-nsg/securityRules/In_Any-internal-snet_Deny_All]
+azurerm_network_security_rule.internal_allow_IT_sr2: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-inernal-scus-nsg/securityRules/In_STL-RT01_internal-snet_Allow_All]
+azurerm_network_security_rule.internal_allow_SQL-MGT_sr: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-inernal-scus-nsg/securityRules/In_KIO1-RDM01_DVINB2-SQL01_Allow_All]
+data.azurerm_virtual_network.MR8-Prod-SCUS-VNet: Read complete after 1s [id=/subscriptions/58e2361d-344c-4e85-b45b-c7435e9e2a42/resourceGroups/MR8-PROD-rg/providers/Microsoft.Network/virtualNetworks/MR8-Prod-SCUS-VNet]
+azurerm_network_security_rule.internal_allow_IT_sr: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-inernal-scus-nsg/securityRules/In_cca1-IT-001_internal-snet_Allow_All]
+azurerm_nat_gateway_public_ip_association.int-staging-ngw: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/natGateways/ont-dev1-int-staging-scus-ngw|/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/publicIPAddresses/int-staging-ngw-scus-pip01]
+data.azurerm_key_vault_secret.intertel-svc-directoryservice: Reading...
+data.azurerm_key_vault_secret.ontadmin: Reading...
+azurerm_subnet_nat_gateway_association.int-staging-internal-ngw: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-internal-scus-snet]
+azurerm_subnet_network_security_group_association.internal_nsg_association: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-internal-scus-snet]
+azurerm_subnet_route_table_association.internal_snet_rt_association: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-internal-scus-snet]
+azurerm_network_interface.vm-nics["STINB2-TFS01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkInterfaces/STINB2-TFS01-nic]
+azurerm_network_interface.vm-nics["STINB2-SQL01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkInterfaces/STINB2-SQL01-nic]
+azurerm_network_interface.vm-nics["STINB2-UTL01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkInterfaces/STINB2-UTL01-nic]
+azurerm_network_interface.vm-nics["STINB2-WEB01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkInterfaces/STINB2-WEB01-nic]
+azurerm_network_interface.vm-nics["STINB2-MGT01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkInterfaces/STINB2-MGT01-nic]
+azurerm_private_dns_zone_virtual_network_link.privatelink-file-dns-vnet: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/privateDnsZones/privatelink.file.core.windows.net/virtualNetworkLinks/file]
+azurerm_subnet_network_security_group_association.avd_nsg_association: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-avd-scus-snet]
+azurerm_storage_account.file_storage_acc: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Storage/storageAccounts/stgintfiles01]
+azurerm_network_interface.Intertel-STG-Personal-Pool01_vm_nic[0]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkInterfaces/IN-STG-Per-1-nic]
+azurerm_network_interface.Intertel-STG-Personal-Pool01_vm_nic[1]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkInterfaces/IN-STG-Per-2-nic]
+azurerm_subnet_nat_gateway_association.int-staging-avd-ngw: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-avd-scus-snet]
+azurerm_storage_account.file_storage_profiles: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Storage/storageAccounts/stgintprofiles01]
+azurerm_subnet_route_table_association.avd_snet_rt_association: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-avd-scus-snet]
+azurerm_subnet_network_security_group_association.dmz_nsg_association: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-dmz-scus-snet]
+azurerm_subnet_route_table_association.dmz_snet_rt_association: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-dmz-scus-snet]
+azurerm_virtual_network_peering.prod_it_vnet_main_vnet: Refreshing state... [id=/subscriptions/58e2361d-344c-4e85-b45b-c7435e9e2a42/resourceGroups/IT-Prod-RG/providers/Microsoft.Network/virtualNetworks/IT-Prod-SCUS-VNet/virtualNetworkPeerings/it-prod-scus-vnet-TO-intertel-staging-scus-vnet]
+azurerm_virtual_network_peering.main_vnet_it_vnet: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/virtualNetworkPeerings/intertel-staging-scus-vnet-TO-it-prod-scus-vnet]
+azurerm_virtual_network_peering.main_vnet_MR8-Prod-SCUS-VNet: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/virtualNetworkPeerings/intertel-staging-scus-vnet-TO-MR8-Prod-SCUS-VNet]
+azurerm_virtual_network_peering.MR8-Prod-SCUS-VNet_main_vnet: Refreshing state... [id=/subscriptions/58e2361d-344c-4e85-b45b-c7435e9e2a42/resourceGroups/MR8-PROD-rg/providers/Microsoft.Network/virtualNetworks/MR8-Prod-SCUS-VNet/virtualNetworkPeerings/MR8-Prod-SCUS-VNet-TO-intertel-staging-scus-vnet]
+azurerm_virtual_desktop_workspace_application_group_association.Intertel-STG-Personal-Pool01_ws-dag: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.DesktopVirtualization/workspaces/Intertel-Staging|/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.DesktopVirtualization/applicationGroups/Intertel-Staging-dag]
+azurerm_role_assignment.Intertel-STG-Personal-Pool01_Desktop-Virtualization-User: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.DesktopVirtualization/applicationGroups/Intertel-Staging-dag/providers/Microsoft.Authorization/roleAssignments/0229684e-6d93-35c7-92bd-f86bd3d9fb91]
+azurerm_network_security_rule.internal_allow_avd_rdp_sr: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/networkSecurityGroups/intertel-staging-inernal-scus-nsg/securityRules/In_avd-snet_internal-snet_Allow_RDP]
+data.azurerm_key_vault_secret.intertel-svc-directoryservice: Read complete after 3s [id=https://ont-it-keyvault.vault.azure.net/secrets/intertel-svc-directoryservice/bbfa0b5bf0014d4e912282e030dfd283]
+azurerm_storage_share.file_storage_profiles["profiles01"]: Refreshing state... [id=https://stgintprofiles01.file.core.windows.net/profiles01]
+azurerm_private_endpoint.profile_endpoint: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/privateEndpoints/stgintprofiles01-pep01]
+data.azurerm_key_vault_secret.ontadmin: Read complete after 3s [id=https://ont-it-keyvault.vault.azure.net/secrets/ontadmin/fa0ca39a91b84c629431428f4d20f079]
+azurerm_windows_virtual_machine.vms["STINB2-SQL01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-SQL01]
+azurerm_windows_virtual_machine.Intertel-STG-Personal-Pool01_vm[1]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/IN-STG-Per-2]
+azurerm_windows_virtual_machine.vms["STINB2-TFS01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-TFS01]
+azurerm_windows_virtual_machine.vms["STINB2-UTL01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-UTL01]
+azurerm_windows_virtual_machine.Intertel-STG-Personal-Pool01_vm[0]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/IN-STG-Per-1]
+azurerm_windows_virtual_machine.vms["STINB2-WEB01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-WEB01]
+azurerm_windows_virtual_machine.vms["STINB2-MGT01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-MGT01]
+azurerm_storage_share.file_share["tloxml"]: Refreshing state... [id=https://stgintfiles01.file.core.windows.net/tloxml]
+azurerm_private_endpoint.file_endpoint: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/privateEndpoints/stgintfiles01-pep01]
+azurerm_storage_share.file_share["emailattachments"]: Refreshing state... [id=https://stgintfiles01.file.core.windows.net/emailattachments]
+azurerm_storage_share.file_share["clientapps"]: Refreshing state... [id=https://stgintfiles01.file.core.windows.net/clientapps]
+azurerm_storage_share.file_share["netdata"]: Refreshing state... [id=https://stgintfiles01.file.core.windows.net/netdata]
+azurerm_storage_share.file_share["generatedcanvassreports"]: Refreshing state... [id=https://stgintfiles01.file.core.windows.net/generatedcanvassreports]
+azurerm_storage_share.file_share["reportgeneration"]: Refreshing state... [id=https://stgintfiles01.file.core.windows.net/reportgeneration]
+azurerm_private_dns_a_record.dns_profile_share: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/privateDnsZones/privatelink.file.core.windows.net/A/stgintprofiles01]
+azurerm_virtual_machine_extension.domain_join[1]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/IN-STG-Per-2/extensions/IN-STG-Per-2-domainJoin]
+azurerm_virtual_machine_extension.domain_join[0]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/IN-STG-Per-1/extensions/IN-STG-Per-1-domainJoin]
+azurerm_dev_test_global_vm_shutdown_schedule.vm-autoshutdown["STINB2-MGT01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.DevTestLab/schedules/shutdown-computevm-STINB2-MGT01]
+azurerm_virtual_machine_data_disk_attachment.vm-sql-disks-attach["data"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-SQL01/dataDisks/STINB2-SQL01-disk-SQLVMDATA01]
+azurerm_virtual_machine_extension.vms-domain-join["STINB2-SQL01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-SQL01/extensions/STINB2-SQL01-domain-join]
+azurerm_virtual_machine_extension.vms-domain-join["STINB2-WEB01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-WEB01/extensions/STINB2-WEB01-domain-join]
+azurerm_virtual_machine_extension.vms-domain-join["STINB2-UTL01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-UTL01/extensions/STINB2-UTL01-domain-join]
+azurerm_virtual_machine_extension.vms-domain-join["STINB2-TFS01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-TFS01/extensions/STINB2-TFS01-domain-join]
+azurerm_virtual_machine_extension.vms-domain-join["STINB2-MGT01"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-MGT01/extensions/STINB2-MGT01-domain-join]
+azurerm_virtual_machine_data_disk_attachment.vm-sql-disks-attach["logs"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-SQL01/dataDisks/STINB2-SQL01-disk-SQLVMLOGS]
+azurerm_virtual_machine_data_disk_attachment.vm-sql-disks-attach["tempdb"]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/STINB2-SQL01/dataDisks/STINB2-SQL01-disk-SQLVMTEMPDB]
+azurerm_private_dns_a_record.dns_file_share: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/privateDnsZones/privatelink.file.core.windows.net/A/stgintfiles01]
+azurerm_virtual_machine_extension.Intertel-STG-Personal-Pool01_vmext_dsc[0]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/IN-STG-Per-1/extensions/IN-STG-Per1-avd_dsc]
+azurerm_virtual_machine_extension.Intertel-STG-Personal-Pool01_vmext_dsc[1]: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/IN-STG-Per-2/extensions/IN-STG-Per2-avd_dsc]
+azurerm_mssql_virtual_machine.vm-sql: Refreshing state... [id=/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.SqlVirtualMachine/sqlVirtualMachines/STINB2-SQL01]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+  ~ update in-place
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+  # azurerm_subnet_route_table_association.avd_snet_rt_association must be replaced
+-/+ resource "azurerm_subnet_route_table_association" "avd_snet_rt_association" {
+      ~ id             = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-avd-scus-snet" -> (known after apply)
+      ~ route_table_id = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" -> "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/NetworkServices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" # forces replacement
+        # (1 unchanged attribute hidden)
+    }
+
+  # azurerm_subnet_route_table_association.dmz_snet_rt_association must be replaced
+-/+ resource "azurerm_subnet_route_table_association" "dmz_snet_rt_association" {
+      ~ id             = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-dmz-scus-snet" -> (known after apply)
+      ~ route_table_id = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" -> "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/NetworkServices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" # forces replacement
+        # (1 unchanged attribute hidden)
+    }
+
+  # azurerm_subnet_route_table_association.internal_snet_rt_association must be replaced
+-/+ resource "azurerm_subnet_route_table_association" "internal_snet_rt_association" {
+      ~ id             = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Network/virtualNetworks/intertel-staging-scus-vnet/subnets/intertel-staging-internal-scus-snet" -> (known after apply)
+      ~ route_table_id = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/networkservices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" -> "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/NetworkServices-dev-scus-rg/providers/Microsoft.Network/routeTables/dev-scus-rt" # forces replacement
+        # (1 unchanged attribute hidden)
+    }
+
+  # azurerm_virtual_desktop_host_pool_registration_info.Intertel-STG-Personal-Pool01_registrationinfo will be created
+  + resource "azurerm_virtual_desktop_host_pool_registration_info" "Intertel-STG-Personal-Pool01_registrationinfo" {
+      + expiration_date = "2023-07-24T12:01:00Z"
+      + hostpool_id     = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.DesktopVirtualization/hostPools/Intertel-Staging-Personal-Pool01"
+      + id              = (known after apply)
+      + token           = (sensitive value)
+    }
+
+  # azurerm_virtual_machine_extension.Intertel-STG-Personal-Pool01_vmext_dsc[0] will be updated in-place
+  ~ resource "azurerm_virtual_machine_extension" "Intertel-STG-Personal-Pool01_vmext_dsc" {
+        id                          = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/IN-STG-Per-1/extensions/IN-STG-Per1-avd_dsc"
+        name                        = "IN-STG-Per1-avd_dsc"
+      ~ protected_settings          = (sensitive value)
+        tags                        = {}
+        # (8 unchanged attributes hidden)
+    }
+
+  # azurerm_virtual_machine_extension.Intertel-STG-Personal-Pool01_vmext_dsc[1] will be updated in-place
+  ~ resource "azurerm_virtual_machine_extension" "Intertel-STG-Personal-Pool01_vmext_dsc" {
+        id                          = "/subscriptions/ffe5c17f-a5cd-46d5-8137-b8c02ee481af/resourceGroups/int-staging-rg/providers/Microsoft.Compute/virtualMachines/IN-STG-Per-2/extensions/IN-STG-Per2-avd_dsc"
+        name                        = "IN-STG-Per2-avd_dsc"
+      ~ protected_settings          = (sensitive value)
+        tags                        = {}
+        # (8 unchanged attributes hidden)
+    }
+
+Plan: 4 to add, 2 to change, 3 to destroy.
+
+ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+
+Saved the plan to: tfplan.tfplan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "tfplan.tfplan"
